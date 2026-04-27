@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  bd:
+    image: mcr.microsoft.com/mssql/server
+    container_name: bd_clientes
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=y
+      - SA_PASSWORD=Upt.2022
+    volumes:
+      - ./db:/tmp
